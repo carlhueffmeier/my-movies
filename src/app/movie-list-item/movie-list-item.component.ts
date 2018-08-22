@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Movie } from '../movie';
-import { getImgUri } from '../helper/utils';
+import { Movie } from '../_types/movie';
+import { getImgUri } from '../_helper/utils';
 
 @Component({
   selector: 'app-movie-list-item',

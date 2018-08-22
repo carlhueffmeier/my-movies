@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Movie } from './movie';
-import { MovieDetails } from './movieDetails';
-import { Category } from './category';
 import { Observable } from 'rxjs';
-import config from '../../config.json';
+import { Movie } from '../_types/movie';
+import { MovieDetails } from '../_types/movieDetails';
+import { Category } from '../_types/category';
+import config from '../../../config.json';
 
 @Injectable({
   providedIn: 'root'

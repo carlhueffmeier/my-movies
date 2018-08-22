@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ApiClientService } from '../api-client.service';
-import { MovieDetails } from '../movieDetails';
-import { getImgUri } from '../helper/utils';
+import { ApiClientService } from '../_services/api-client.service';
+import { MovieDetails } from '../_types/movieDetails';
+import { getImgUri } from '../_helper/utils';
 
 @Component({
   selector: 'app-movie-details',

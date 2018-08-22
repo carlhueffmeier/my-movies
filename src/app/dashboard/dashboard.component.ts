@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiClientService } from '../api-client.service';
-import { Movie } from '../movie';
-import { Category } from '../category';
+import { ApiClientService } from '../_services/api-client.service';
+import { Movie } from '../_types/movie';
+import { Category } from '../_types/category';
 
 const PRESELECTED_CATEGORY_ID = 28;
 

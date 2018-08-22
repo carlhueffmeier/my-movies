@@ -1,0 +1,4 @@
+<h2>Box Office</h2>
+<app-movie-list [movies]="discoverMovies"></app-movie-list>
+<app-category-select [categories]="categories" [selected]="selectedCategory" (onChange)="selectCategory($event)"></app-category-select>
+<app-movie-list [movies]="categoryMovies"></app-movie-list>

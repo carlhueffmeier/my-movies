@@ -1,0 +1,6 @@
+<select (change)="onChange.emit($event.target.value)">
+  <option *ngIf="!categories" selected disabled>Loading...</option>
+  <option *ngFor="let category of categories || []" [value]="category.id" [class.selected]="category.id === selected">
+    {{category.name}}
+  </option>
+</select>

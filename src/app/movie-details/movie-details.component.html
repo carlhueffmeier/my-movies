@@ -1,0 +1,21 @@
+<div class="movie-details" *ngIf="movie">
+  <div class="movie-details__top">
+    <div class="movie-details__poster">
+      <img [src]="getPosterUri()" alt="Movie Poster" class="movie-details__image">
+    </div>
+    <div class="movie-details__info">
+      <div class="movie-details__title">{{movie.title}}</div>
+      <div class="movie-details__tagline">{{movie.tagline}}</div>
+      <div class="movie-details__info-row">
+        <div class="movie-details__label">Production Company</div>
+        <div class="movie-details__detail">{{getProductionCompanies()}}</div>
+      </div>
+      <div class="movie-details__info-row">
+        <div class="movie-details__label">Genre</div>
+        <div class="movie-details__detail">{{getGenres()}}</div>
+      </div>
+      <div class="movie-details__star-rating">{{movie.vote_average}}</div>
+    </div>
+  </div>
+  <div class="movie-details__description">{{movie.overview}}</div>
+</div>

@@ -1,0 +1,7 @@
+.app {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #37474f;
+  min-height: 100vh;
+  overflow: hidden;
+  padding-bottom: 3rem;
+}

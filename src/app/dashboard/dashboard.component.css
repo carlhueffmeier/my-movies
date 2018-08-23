@@ -1,0 +1,10 @@
+.dashboard {
+  padding: 3rem 2rem 0;
+}
+
+.list-title {
+  display: block;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}

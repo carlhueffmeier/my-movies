@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  padding: 0 2rem;
+  background-color: #263238;
+  align-items: center;
+}
+
+.navbar__home:link,
+.navbar__home:visited,
+.navbar__home {
+  color: white;
+  text-decoration: none;
+  padding: 1rem 1rem 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}

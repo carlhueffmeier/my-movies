@@ -1,0 +1,30 @@
+.category-select__wrapper {
+  position: relative;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.category-select__select {
+  color: white;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  appearance: none;
+  padding-bottom: 0.3rem;
+  padding-right: 2rem;
+}
+
+.category-select__select:focus,
+.category-select__select:active {
+  outline: none;
+}
+
+.category-select__chevron {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 1.5rem;
+}

@@ -11,6 +11,8 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategorySelectComponent } from './category-select/category-select.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
+import { SvgIconComponent } from './svg-icon/svg-icon.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,16 @@ import { CategorySelectComponent } from './category-select/category-select.compo
     MovieListItemComponent,
     MovieDetailsComponent,
     NavbarComponent,
-    CategorySelectComponent
+    CategorySelectComponent,
+    StarRatingComponent,
+    SvgIconComponent
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

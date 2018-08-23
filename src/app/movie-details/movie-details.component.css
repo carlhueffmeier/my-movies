@@ -1,0 +1,58 @@
+.movie-details {
+  padding: 4rem 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.movie-details__top {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+.movie-details__poster {
+  height: 30vh;
+  margin-right: 2rem;
+}
+.movie-details__image {
+  height: 100%;
+}
+.movie-details__title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+.movie-details__tagline {
+  font-size: 1.2rem;
+  color: rgb(200, 200, 200);
+  margin-bottom: 1.8rem;
+}
+.movie-details__info-row {
+  display: flex;
+  line-height: 1.5;
+}
+.movie-details__info-row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.movie-details__label {
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+.movie-details__label,
+.movie-details__detail {
+  font-size: 1rem;
+}
+
+.movie-details__label {
+  color: white;
+}
+.movie-details__detail {
+  color: rgb(200, 200, 200);
+}
+.movie-details__star-rating {
+  margin: 2rem 0;
+}
+.movie-details__description {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 300;
+}

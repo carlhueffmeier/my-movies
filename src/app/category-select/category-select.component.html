@@ -1,6 +1,12 @@
-<select (change)="onChange.emit($event.target.value)">
-  <option *ngIf="!categories" selected disabled>Loading...</option>
-  <option *ngFor="let category of categories || []" [value]="category.id" [class.selected]="category.id === selected">
-    {{category.name}}
-  </option>
-</select>
+<div class="category-select__wrapper">
+  <select class="category-select__select" (change)="onChange.emit($event.target.value)">
+    <option *ngIf="!categories" selected disabled>Loading...</option>
+    <option *ngFor="let category of categories || []" [value]="category.id" [class.selected]="category.id === selected">
+      {{category.name}}
+    </option>
+  </select>
+  <div class="category-select__chevron">
+    <app-svg-icon type="chevron-down">
+    </app-svg-icon>
+  </div>
+</div>

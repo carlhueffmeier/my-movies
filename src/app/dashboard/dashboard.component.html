@@ -1,4 +1,7 @@
-<div class="dashboard">
+<div *ngIf="isLoading()" class="container-centered">
+  <app-spinner></app-spinner>
+</div>
+<div *ngIf="!isLoading()" class="dashboard">
   <span class="list-title">Box Office</span>
   <app-movie-list [movies]="discoverMovies"></app-movie-list>
   <app-category-select [categories]="categories" [selected]="selectedCategory" (onChange)="selectCategory($event)"></app-category-select>

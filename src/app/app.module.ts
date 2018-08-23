@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategorySelectComponent } from './category-select/category-select.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { SvgIconComponent } from './svg-icon/svg-icon.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SvgIconComponent } from './svg-icon/svg-icon.component';
     NavbarComponent,
     CategorySelectComponent,
     StarRatingComponent,
-    SvgIconComponent
+    SvgIconComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

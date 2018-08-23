@@ -1,4 +1,7 @@
-<div class="movie-details" *ngIf="movie">
+<div *ngIf="isLoading()" class="container-centered">
+  <app-spinner></app-spinner>
+</div>
+<div *ngIf="!isLoading()" class="movie-details">
   <div class="movie-details__top">
     <div class="movie-details__poster">
       <img [src]="getPosterUri()" alt="Movie Poster" class="movie-details__image">

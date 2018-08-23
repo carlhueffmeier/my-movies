@@ -38,6 +38,10 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  isLoading() {
+    return !(this.discoverMovies && this.categories && this.categoryMovies);
+  }
+
   ngOnInit() {
     this.getMovies();
     this.getCategories();

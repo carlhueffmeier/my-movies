@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-
+:root {
+  --color-bg-light: #37474f;
+  --color-bg-dark: #263238;
+  --color-highlight-light: #4db6ac;
+  --color-highlight-dark: #00796b;
+}
 html {
   min-height: 100%;
   width: 100%;

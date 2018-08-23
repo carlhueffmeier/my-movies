@@ -1,6 +1,6 @@
 .app {
   font-family: 'Quicksand', sans-serif;
-  background-color: #37474f;
+  background-color: var(--color-bg-light);
   min-height: 100vh;
   overflow: hidden;
   padding-bottom: 3rem;

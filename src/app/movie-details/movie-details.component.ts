@@ -17,6 +17,10 @@ export class MovieDetailsComponent implements OnInit {
     private apiClient: ApiClientService
   ) {}
 
+  isLoading() {
+    return !this.movie;
+  }
+
   getMovie(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.apiClient.getMovieDetails(id).subscribe(data => {

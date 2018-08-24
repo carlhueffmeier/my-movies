@@ -1,6 +1,6 @@
 .search {
   display: flex;
-  flex: 0 1 30rem;
+  flex: 0 1;
   justify-content: flex-end;
   min-height: 2.8rem;
 }
@@ -57,10 +57,14 @@
     margin: 0.3rem;
     visibility: visible;
     opacity: 0.5;
-    transition: all 0.3s;
+    transition: width 0.3s cubic-bezier(0.19, 0.78, 0.75, 1.05),
+      opacity 0.3s ease-in;
+    width: 10rem;
   }
+
   .search__form:focus-within {
     opacity: 1;
+    width: 16.5rem;
   }
 }
 

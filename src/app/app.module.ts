@@ -14,6 +14,8 @@ import { CategorySelectComponent } from './category-select/category-select.compo
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { SvgIconComponent } from './svg-icon/svg-icon.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { SearchBoxComponent } from './search-box/search-box.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { SpinnerComponent } from './spinner/spinner.component';
     CategorySelectComponent,
     StarRatingComponent,
     SvgIconComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SearchBoxComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,

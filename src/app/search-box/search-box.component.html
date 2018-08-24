@@ -1,0 +1,18 @@
+<div class="search">
+  <form class="search__form" [ngClass]="{'visible': visible}">
+    <button (click)="toggleVisible(false)" type="button" class="search__close-button button" title="Hide search field" aria-label="Hide search field">
+      <div class="search__close-icon icon-container">
+        <app-svg-icon type="arrow_back"></app-svg-icon>
+      </div>
+    </button>
+    <input (input)="onChange.emit($event.target.value)" class="search__text-input" placeholder="Search..." aria-label="Search for movies">
+    <button (click)="onChange.emit('')" type="reset" class="search__clear-button button" title="Clear search field" aria-label="Clear search field">
+      <div class="search__clear-icon icon-container">
+        <app-svg-icon type="close"></app-svg-icon>
+      </div>
+    </button>
+  </form>
+  <button (click)="toggleVisible(true)" class="search__open-search-button" title="Search" aria-label="Reveal search field">
+    <app-svg-icon type="search"></app-svg-icon>
+  </button>
+</div>

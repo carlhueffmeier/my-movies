@@ -1,8 +1,11 @@
 .navbar {
+  position: relative;
   display: flex;
   padding: 0 2rem;
   background-color: var(--color-bg-dark);
+  box-shadow: 0 0 10px var(--color-bg-dark);
   align-items: center;
+  justify-content: space-between;
 }
 
 .navbar__home:link,

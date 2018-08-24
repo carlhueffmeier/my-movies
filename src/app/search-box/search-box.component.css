@@ -1,0 +1,121 @@
+.search {
+  display: flex;
+  flex: 0 1 30rem;
+  justify-content: flex-end;
+  min-height: 2.8rem;
+}
+
+.search__open-search-button {
+  display: flex;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.8rem;
+  background: none;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search__open-search-button:hover,
+.search__open-search-button:active,
+.search__open-search-button:focus {
+  outline: transparent;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .search__open-search-button {
+    display: none;
+  }
+}
+
+.search__form {
+  visibility: hidden;
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  bottom: 0.3rem;
+  right: 0.3rem;
+  display: flex;
+}
+
+.search__form.visible {
+  visibility: visible;
+}
+
+@media only screen and (min-width: 768px) {
+  .search__form {
+    position: unset;
+    flex: 1;
+    display: flex;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 0.3rem;
+    visibility: visible;
+    opacity: 0.5;
+    transition: all 0.3s;
+  }
+  .search__form:focus-within {
+    opacity: 1;
+  }
+}
+
+.search__text-input {
+  flex: 1;
+  margin-left: -3rem;
+  margin-right: -3rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .search__text-input {
+    padding-left: 1rem;
+  }
+}
+
+.search__text-input:focus {
+  outline: none;
+}
+
+.search__clear-button,
+.search__close-button {
+  position: relative;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  display: flex;
+  color: #6e6e6e;
+  width: 3rem;
+  cursor: pointer;
+}
+
+.search__clear-button:focus,
+.search__clear-button:hover,
+.search__clear-button:active,
+.search__close-button:focus,
+.search__close-button:hover,
+.search__close-button:active {
+  outline: transparent;
+  color: #222;
+  transform: scale(1.05, 1.05);
+}
+
+.search__close-icon {
+  padding-left: 1rem;
+}
+
+.search__clear-icon {
+  padding-right: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .search__close-button {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,9 @@
+<div *ngIf="isLoading()" class="container-centered">
+  <app-spinner></app-spinner>
+</div>
+
+<div *ngIf="!isLoading()" class="search-results">
+  <div class="movie-grid">
+    <app-movie-list-item [movie]="movie" *ngFor="let movie of searchResults"></app-movie-list-item>
+  </div>
+</div>

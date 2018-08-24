@@ -29,4 +29,8 @@ export class ApiClientService {
   getMovieDetails(movieId: number): Observable<MovieDetails> {
     return this.http.get<MovieDetails>(this.baseUrl + `/movie/${movieId}`);
   }
+
+  getSearchResults(query: string): Observable<Movie[]> {
+    return this.http.get<Movie[]>(this.baseUrl + `/search?q=${query}`);
+  }
 }

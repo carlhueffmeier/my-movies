@@ -85,7 +85,8 @@
   }
 
   .movie-details__poster {
-    height: 30vh;
+    height: 35vh;
+    max-height: 400px;
     justify-content: flex-start;
     margin-right: 2rem;
   }

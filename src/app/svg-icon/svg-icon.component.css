@@ -6,3 +6,7 @@
   stroke: currentColor;
   fill: currentColor;
 }
+
+:host {
+  display: flex;
+}

@@ -1,6 +1,6 @@
 <div class="movie-list__item">
   <div class="movie-list__inner">
-    <a class="movie-list__link" routerLink={{movie.id}}>
+    <a class="movie-list__link" [routerLink]="'/' + movie.id">
       <img class="movie-list__poster" alt={{movie.title}} src={{getPosterUri()}}>
     </a>
   </div>

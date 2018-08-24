@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SearchService } from '../_services/search.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-box',
@@ -8,8 +9,9 @@ import { SearchService } from '../_services/search.service';
 })
 export class SearchBoxComponent {
   private visible: boolean;
+  query: string = '';
 
-  constructor(private searchService: SearchService) {}
+  constructor(private searchService: SearchService, private router: Router) {}
 
   toggleVisible(to = !this.visible) {
     this.visible = to;
@@ -17,5 +19,14 @@ export class SearchBoxComponent {
 
   handleQueryChange(newValue) {
     this.searchService.updateSearchQuery(newValue);
+    if (newValue) {
+      this.router.navigate(['/search'], { queryParams: { query: newValue } });
+    }
+  }
+
+  ngOnInit() {
+    this.searchService.searchQuery$.subscribe(query => {
+      this.query = query;
+    });
   }
 }

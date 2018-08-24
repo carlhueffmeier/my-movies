@@ -1,5 +1,4 @@
 <div class="app">
   <app-navbar></app-navbar>
-  <router-outlet *ngIf="!isSearching"></router-outlet>
-  <app-search-results [searchResults]="searchResults" *ngIf="isSearching"></app-search-results>
+  <router-outlet></router-outlet>
 </div>

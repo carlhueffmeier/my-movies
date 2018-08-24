@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs/operators';
 import { SearchService } from './_services/search.service';
+import { ActivatedRoute } from '@angular/router';
 import { Movie } from './_types/movie';
 
 @Component({
@@ -10,17 +10,15 @@ import { Movie } from './_types/movie';
 })
 export class AppComponent implements OnInit {
   searchResults: Movie[];
-  isSearching: boolean;
-  constructor(private searchService: SearchService) {}
+
+  constructor(
+    private searchService: SearchService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.searchService.searchResults$.subscribe(data => {
-      this.searchResults = [...data];
-    });
-    this.searchService.searchQuery$
-      .pipe(map(Boolean))
-      .subscribe(queryNotEmpty => {
-        this.isSearching = queryNotEmpty;
-      });
+    this.route.queryParamMap.subscribe(params =>
+      this.searchService.updateSearchQuery(params.get('query') || '')
+    );
   }
 }

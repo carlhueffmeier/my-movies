@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
+  { path: 'search', component: SearchResultsComponent },
   { path: ':id', component: MovieDetailsComponent },
+  { path: '', component: DashboardComponent },
   { path: '**', redirectTo: '' }
 ];
 

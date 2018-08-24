@@ -1,6 +1,7 @@
 {
   "name": "my-movies",
   "version": "0.0.0",
+  "repository": "github:carlhueffmeier/my-movies",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -18,9 +18,10 @@ export class SearchBoxComponent {
   }
 
   handleQueryChange(newValue) {
-    this.searchService.updateSearchQuery(newValue);
     if (newValue) {
       this.router.navigate(['/search'], { queryParams: { query: newValue } });
+    } else {
+      this.router.navigate(['']);
     }
   }
 

@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { switchMap, debounceTime, filter } from 'rxjs/operators';
+import {
+  switchMap,
+  debounceTime,
+  filter,
+  distinctUntilChanged,
+  map,
+  startWith
+} from 'rxjs/operators';
 import { Movie } from '../_types/movie';
 import { SearchService } from '../_services/search.service';
 import { ApiClientService } from '../_services/api-client.service';
@@ -24,8 +31,10 @@ export class SearchResultsComponent implements OnInit {
   ngOnInit() {
     this.searchService.searchQuery$
       .pipe(
-        debounceTime(100),
+        startWith(this.searchService.getLatest()),
+        debounceTime(500),
         filter(Boolean),
+        distinctUntilChanged(),
         switchMap(query => this.apiClient.getSearchResults(query))
       )
       .subscribe(data => {

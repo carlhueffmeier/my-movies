@@ -39,4 +39,4 @@ testem.log
 Thumbs.db
 
 # Environment specific configuration
-config.json
+config.ts

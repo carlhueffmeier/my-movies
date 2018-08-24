@@ -2,7 +2,7 @@
 
 A movie dashboard developed with the Angular CLI.
 
-**The project won't work without a valid `API` setting in `config.json`**
+**The project won't work without a valid `API` setting in `config.ts`**
 
 ## Getting Started
 

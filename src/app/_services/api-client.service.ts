@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Movie } from '../_types/movie';
 import { MovieDetails } from '../_types/movieDetails';
 import { Category } from '../_types/category';
-import config from '../../../config.json';
+import config from '../../../config';
 
 @Injectable({
   providedIn: 'root'

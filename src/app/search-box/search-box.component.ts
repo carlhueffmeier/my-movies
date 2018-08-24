@@ -1,4 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { SearchService } from '../_services/search.service';
 
 @Component({
   selector: 'app-search-box',
@@ -6,11 +7,15 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./search-box.component.css']
 })
 export class SearchBoxComponent {
-  @Output()
-  onChange = new EventEmitter();
   private visible: boolean;
+
+  constructor(private searchService: SearchService) {}
 
   toggleVisible(to = !this.visible) {
     this.visible = to;
+  }
+
+  handleQueryChange(newValue) {
+    this.searchService.updateSearchQuery(newValue);
   }
 }

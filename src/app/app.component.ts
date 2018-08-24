@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { ApiClientService } from './_services/api-client.service';
+import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { SearchService } from './_services/search.service';
 import { Movie } from './_types/movie';
 
 @Component({
@@ -7,29 +8,19 @@ import { Movie } from './_types/movie';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  private query: string = '';
+export class AppComponent implements OnInit {
   searchResults: Movie[];
+  isSearching: boolean;
+  constructor(private searchService: SearchService) {}
 
-  constructor(private apiClient: ApiClientService) {}
-
-  handleSearchQueryChange(newValue) {
-    this.query = newValue;
-    if (this.query) {
-      this.fetchSearchResults();
-    } else {
-      this.searchResults = [];
-    }
-  }
-
-  fetchSearchResults() {
-    this.apiClient.getSearchResults(this.query).subscribe(data => {
+  ngOnInit() {
+    this.searchService.searchResults$.subscribe(data => {
       this.searchResults = [...data];
-      console.log(this.searchResults);
     });
-  }
-
-  isSearching() {
-    return this.query;
+    this.searchService.searchQuery$
+      .pipe(map(Boolean))
+      .subscribe(queryNotEmpty => {
+        this.isSearching = queryNotEmpty;
+      });
   }
 }

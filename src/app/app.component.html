@@ -1,5 +1,5 @@
 <div class="app">
-  <app-navbar (onSearchQueryChange)="handleSearchQueryChange($event)"></app-navbar>
-  <router-outlet *ngIf="!isSearching()"></router-outlet>
-  <app-search-results [searchResults]="searchResults" *ngIf="isSearching()"></app-search-results>
+  <app-navbar></app-navbar>
+  <router-outlet *ngIf="!isSearching"></router-outlet>
+  <app-search-results [searchResults]="searchResults" *ngIf="isSearching"></app-search-results>
 </div>

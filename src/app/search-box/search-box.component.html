@@ -5,8 +5,8 @@
         <app-svg-icon type="arrow_back"></app-svg-icon>
       </div>
     </button>
-    <input (input)="onChange.emit($event.target.value)" class="search__text-input" placeholder="Search..." aria-label="Search for movies">
-    <button (click)="onChange.emit('')" type="reset" class="search__clear-button button" title="Clear search field" aria-label="Clear search field">
+    <input (input)="handleQueryChange($event.target.value)" class="search__text-input" placeholder="Search..." aria-label="Search for movies">
+    <button (click)="handleQueryChange('')" type="reset" class="search__clear-button button" title="Clear search field" aria-label="Clear search field">
       <div class="search__clear-icon icon-container">
         <app-svg-icon type="close"></app-svg-icon>
       </div>

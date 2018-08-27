@@ -4,7 +4,6 @@ import {
   debounceTime,
   filter,
   distinctUntilChanged,
-  map,
   startWith
 } from 'rxjs/operators';
 import { Movie } from '../_types/movie';

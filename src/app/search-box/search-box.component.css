@@ -57,8 +57,8 @@
     margin: 0.3rem;
     visibility: visible;
     opacity: 0.5;
-    transition: width 0.3s cubic-bezier(0.19, 0.78, 0.75, 1.05),
-      opacity 0.3s ease-in;
+    transition: width 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28),
+      opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
     width: 10rem;
   }
 

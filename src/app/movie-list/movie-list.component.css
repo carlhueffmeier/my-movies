@@ -1,14 +1,18 @@
 .movie-list {
-  overflow-x: auto;
-  overflow-y: hidden;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem;
+  /* overflow-x: auto; */
+  margin: 1rem 0 4rem;
+  padding: 1rem 0;
   -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
 }
 
 .movie-list__list {
   height: 100%;
   white-space: nowrap;
+}
+
+.movie-list__list > *:not(:last-child) {
+  margin-right: 1rem;
 }
 
 ::-webkit-scrollbar {
